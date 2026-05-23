@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game - Multiplayer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Snake Game - Multiplayer</h1>
+
+  <!-- Score Board -->
+  <div id="scoreBoard">
+    <div class="score-box p1-color">
+      <span class="player-label">Player 1</span>
+      <span id="score1Display">0</span>
+    </div>
+    <div class="score-box p2-color">
+      <span class="player-label">Player 2</span>
+      <span id="score2Display">0</span>
+    </div>
+  </div>
+
+  <canvas id="game" width="400" height="400"></canvas>
+
+  <div id="controls">
+    <p><strong>Player 1:</strong> Arrow &uarr; &darr; &larr; &rarr;</p>
+    <p><strong>Player 2:</strong> W A S D</p>
+  </div>
+
+  <div id="info">
+    <p>Tekan <strong>Enter</strong> atau <strong>R</strong> untuk restart</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
