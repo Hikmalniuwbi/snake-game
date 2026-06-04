@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "Snake Game" [level=1] [ref=e4]
+    - paragraph [ref=e5]: Eat, Grow, Survive!
+    - generic [ref=e6]:
+      - generic [ref=e7]: Pilih Mode
+      - button "🐍 Single Player Main sendiri, kumpulkan skor!" [ref=e8] [cursor=pointer]:
+        - generic [ref=e9]: 🐍
+        - generic [ref=e10]:
+          - strong [ref=e11]: Single Player
+          - generic [ref=e12]: Main sendiri, kumpulkan skor!
+      - button "🐍🐍 Double Player 2 pemain, siapa terakhir bertahan?" [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: 🐍🐍
+        - generic [ref=e15]:
+          - strong [ref=e16]: Double Player
+          - generic [ref=e17]: 2 pemain, siapa terakhir bertahan?
+      - button "🤖 VS Computer Lawan AI, buktikan kemampuanmu!" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: 🤖
+        - generic [ref=e20]:
+          - strong [ref=e21]: VS Computer
+          - generic [ref=e22]: Lawan AI, buktikan kemampuanmu!
+    - generic [ref=e23]:
+      - generic [ref=e24]: Tingkat Kesulitan
+      - generic [ref=e25]:
+        - button "Easy" [ref=e26] [cursor=pointer]
+        - button "Medium" [ref=e27] [cursor=pointer]
+        - button "Hard" [ref=e28] [cursor=pointer]
+    - generic [ref=e29]:
+      - generic [ref=e30]: Warna Ular
+      - generic [ref=e31]:
+        - button [ref=e32] [cursor=pointer]
+        - button [ref=e33] [cursor=pointer]
+        - button [ref=e34] [cursor=pointer]
+        - button [ref=e35] [cursor=pointer]
+        - button [ref=e36] [cursor=pointer]
+        - button [ref=e37] [cursor=pointer]
+    - generic [ref=e38]:
+      - button "Tentang" [ref=e39] [cursor=pointer]
+      - button "Cara Bermain" [ref=e40] [cursor=pointer]
+    - button "MULAI" [ref=e41] [cursor=pointer]
+  - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸
+  - button "🔊" [ref=e42] [cursor=pointer]

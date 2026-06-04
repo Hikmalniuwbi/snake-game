@@ -1,0 +1,198 @@
+[      80ms] [LOG] Snake Game Phase 2 loaded @ http://localhost:3000/game.js:1363
+[   25973ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   27077ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   27321ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   27743ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   27978ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   28268ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   28307ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   28727ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   29096ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   29477ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   29653ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   29909ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30096ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30347ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30468ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30585ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30701ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30793ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   30896ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31017ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31128ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31183ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31233ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31327ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31440ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31621ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   31765ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   32168ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   32357ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   34069ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   34394ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   34907ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   36491ms] [LOG] Snake Game Phase 2 loaded @ http://localhost:3000/game.js:1363
+[   41303ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   41736ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   42246ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   42247ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   42322ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   42655ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   42759ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   43434ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   43435ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   43796ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   44087ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   44285ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   44479ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   45806ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   46085ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   46134ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   46257ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   46379ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   46666ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   46891ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47054ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47201ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47202ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47202ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47203ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47285ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47392ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47440ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47462ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47540ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47627ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47673ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47708ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47811ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47876ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   47914ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48025ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48080ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48081ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48111ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48187ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48218ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48218ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48277ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48391ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48392ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48459ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48496ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48560ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48769ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48852ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   48853ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49068ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49069ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49210ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49313ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49313ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49370ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49516ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49600ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49600ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49675ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   49768ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   50126ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   50636ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)
+[   50992ms] ReferenceError: paused is not defined
+    at HTMLDocument.<anonymous> (http://localhost:3000/game.js:1087:3)

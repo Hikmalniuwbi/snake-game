@@ -1,56 +1,246 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>" />
   </head>
   <body>
-    <h1 id="gameTitle">Snake Game</h1>
 
-    <!-- Mode Selection Overlay -->
-    <div id="modeOverlay">
-      <div id="modeMenu">
-        <h2>Pilih Mode Permainan</h2>
-        <p>Pilih mode yang ingin dimainkan:</p>
-        <button class="mode-btn mode-single" onclick="startSingle()">
-          Single Player (1 Pemain)
-        </button>
-        <button class="mode-btn mode-multi" onclick="startMulti()">
-          Multi Player (2 Pemain)
-        </button>
+    <!-- ============================================================
+         HOME / MAIN MENU
+         ============================================================ -->
+    <div id="homeScreen">
+      <div id="mainMenu">
+        <h1 class="game-title">Snake Game</h1>
+        <p class="subtitle">Menuju tak terbatas, dan melampauinya!</p>
+
+        <div class="menu-section">
+          <label class="menu-label">Pilih Mode Bermain</label>
+          <button class="mode-btn mode-single" onclick="selectMode('single')">
+            <span class="mode-icon">🐍</span>
+            <span class="mode-text">
+              <strong>Single Player</strong>
+              <small>Main sendiri, kumpulkan skor!</small>
+            </span>
+          </button>
+          <button class="mode-btn mode-double" onclick="selectMode('double')">
+            <span class="mode-icon">🐍🐍</span>
+            <span class="mode-text">
+              <strong>Double Player</strong>
+              <small>2 pemain, siapa terakhir bertahan?</small>
+            </span>
+          </button>
+          <button class="mode-btn mode-ai" onclick="selectMode('ai')">
+            <span class="mode-icon">🤖</span>
+            <span class="mode-text">
+              <strong>VS Computer</strong>
+              <small>Lawan AI, buktikan kemampuanmu!</small>
+            </span>
+          </button>
+        </div>
+
+        <div class="menu-section">
+          <label class="menu-label">Level Game (Otomatis)</label>
+          <div class="level-info">
+            <div class="level-info-item"><span class="level-tag easy">Easy</span> Skor 0–25 — Lambat</div>
+            <div class="level-info-item"><span class="level-tag medium">Medium</span> Skor 26–50 — Sedang</div>
+            <div class="level-info-item"><span class="level-tag hard">Hard</span> Skor &gt;50 — Cepat</div>
+          </div>
+        </div>
+
+        <!-- Section Warna Ular untuk Single Player / VS AI -->
+        <div class="menu-section" id="colorPickerSingle">
+          <label class="menu-label">Warna Ular</label>
+          <div class="color-picker">
+            <button class="color-btn" data-color="#00ff88" style="background:#00ff88" onclick="setSnakeColor('#00ff88')"></button>
+            <button class="color-btn active-color" data-color="#00d4ff" style="background:#00d4ff" onclick="setSnakeColor('#00d4ff')"></button>
+            <button class="color-btn" data-color="#ff6b35" style="background:#ff6b35" onclick="setSnakeColor('#ff6b35')"></button>
+            <button class="color-btn" data-color="#ffcc00" style="background:#ffcc00" onclick="setSnakeColor('#ffcc00')"></button>
+            <button class="color-btn" data-color="#ff33aa" style="background:#ff33aa" onclick="setSnakeColor('#ff33aa')"></button>
+            <button class="color-btn" data-color="#aa66ff" style="background:#aa66ff" onclick="setSnakeColor('#aa66ff')"></button>
+          </div>
+        </div>
+
+        <!-- Section Warna Ular untuk Double Player (P1 & P2) -->
+        <div class="menu-section" id="colorPickerDouble" style="display:none">
+          <label class="menu-label">Warna Ular Player 1</label>
+          <div class="color-picker" id="colorPickerP1">
+            <button class="color-btn" data-color="#00ff88" style="background:#00ff88" onclick="setSnakeColor('#00ff88')"></button>
+            <button class="color-btn active-color" data-color="#00d4ff" style="background:#00d4ff" onclick="setSnakeColor('#00d4ff')"></button>
+            <button class="color-btn" data-color="#ff6b35" style="background:#ff6b35" onclick="setSnakeColor('#ff6b35')"></button>
+            <button class="color-btn" data-color="#ffcc00" style="background:#ffcc00" onclick="setSnakeColor('#ffcc00')"></button>
+            <button class="color-btn" data-color="#ff33aa" style="background:#ff33aa" onclick="setSnakeColor('#ff33aa')"></button>
+            <button class="color-btn" data-color="#aa66ff" style="background:#aa66ff" onclick="setSnakeColor('#aa66ff')"></button>
+          </div>
+          <label class="menu-label" style="margin-top:12px">Warna Ular Player 2</label>
+          <div class="color-picker" id="colorPickerP2">
+            <button class="color-btn active-color" data-color="#00ff88" style="background:#00ff88" onclick="setSnake2Color('#00ff88')"></button>
+            <button class="color-btn" data-color="#00d4ff" style="background:#00d4ff" onclick="setSnake2Color('#00d4ff')"></button>
+            <button class="color-btn" data-color="#ff6b35" style="background:#ff6b35" onclick="setSnake2Color('#ff6b35')"></button>
+            <button class="color-btn" data-color="#ffcc00" style="background:#ffcc00" onclick="setSnake2Color('#ffcc00')"></button>
+            <button class="color-btn" data-color="#ff33aa" style="background:#ff33aa" onclick="setSnake2Color('#ff33aa')"></button>
+            <button class="color-btn" data-color="#aa66ff" style="background:#aa66ff" onclick="setSnake2Color('#aa66ff')"></button>
+          </div>
+        </div>
+
+        <div class="menu-nav" style="margin-bottom:8px">
+          <button class="nav-btn" onclick="showAbout()">Tentang</button>
+        </div>
+        <button id="playBtn" onclick="transitionToGame()">GASKAN!</button>
       </div>
     </div>
 
-    <!-- Score Board -->
-    <div id="scoreBoard">
-      <div class="score-box p1-color">
-        <span class="player-label">Player 1</span>
-        <span id="score1Display">0</span>
-      </div>
-      <div class="score-box p2-color">
-        <span class="player-label" id="p2Label">Player 2</span>
-        <span id="score2Display">0</span>
-      </div>
-      <div class="score-box level-box">
-        <span class="level-label">Level</span>
-        <span id="levelDisplay">1</span>
+    <!-- ABOUT MODAL -->
+    <div id="aboutModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>Tentang Snake Game</h2>
+        <div class="modal-body">
+          <p><strong>Snake Game</strong> adalah game klasik yang ditingkatkan dengan mode multiplayer dan AI.</p>
+          <p>Dikembangkan sebagai proyek tugas Grafika Komputer - Semester 4.</p>
+          <br/>
+          <p><strong>Fitur:</strong></p>
+          <ul>
+            <li>Single Player - classic snake dengan sistem level</li>
+            <li>Double Player - 2 pemain dalam satu arena</li>
+            <li>VS Computer - lawan AI yang cerdas</li>
+            <li>Level Game otomatis (Easy/Medium/Hard) berdasarkan skor</li>
+            <li>Transisi level dengan kecepatan bertahap</li>
+            <li>Makanan spesial dengan timer</li>
+            <li>Efek suara dan musik latar</li>
+            <li>Kustomisasi warna ular</li>
+          </ul>
+        </div>
+        <button class="modal-close" onclick="hideAbout()">Tutup</button>
       </div>
     </div>
 
-    <canvas id="game" width="400" height="400"></canvas>
-
-    <div id="controls">
-      <p><strong>Player 1:</strong> Arrow &uarr; &darr; &larr; &rarr;</p>
-      <p><strong>Player 2:</strong> W A S D</p>
+    <!-- MODE INSTRUCTIONS MODAL (appears when selecting a mode) -->
+    <div id="modeInstrModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2 id="modeInstrTitle">Cara Bermain</h2>
+        <div class="modal-body" id="modeInstrBody">
+        </div>
+        <div class="mode-instr-buttons">
+          <button class="modal-close mode-instr-back" onclick="cancelModeSelection()">Kembali</button>
+          <button class="modal-close mode-instr-go" onclick="confirmMode()">Lanjutkan</button>
+        </div>
+      </div>
     </div>
 
-    <div id="info">
-      <p>
-        Tekan <strong>P</strong> atau klik <strong>Pause</strong> untuk pause
-      </p>
-      <p>Tekan <strong>Enter</strong> atau <strong>R</strong> untuk restart</p>
-      <button id="pauseBtn" onclick="togglePause()">Pause</button>
+    <!-- ============================================================
+         GAME SCREEN
+         ============================================================ -->
+    <div id="gameScreen" style="display:none">
+
+      <div id="gameHeader">
+        <button id="backBtn" onclick="backToMenu()" title="Kembali ke menu">&larr; Kembali</button>
+        <h1 id="gameTitle">Snake Game</h1>
+        <div id="headerRight"></div>
+      </div>
+
+      <div id="scoreBoard">
+        <div class="score-box p1-box">
+          <span class="player-label">Player 1</span>
+          <span class="score-value" id="score1Display">0</span>
+        </div>
+        <div id="p2ScoreBox" class="score-box p2-box" style="display:none">
+          <span class="player-label" id="p2Label">Player 2</span>
+          <span class="score-value" id="score2Display">0</span>
+        </div>
+        <div class="score-box level-box">
+          <span class="level-label">Level</span>
+          <span class="score-value" id="levelDisplay" style="color:var(--accent)">1</span>
+        </div>
+        <div class="score-box speed-box">
+          <span class="level-label">Speed</span>
+          <span class="score-value" id="speedDisplay" style="color:var(--secondary);font-size:14px">Medium</span>
+        </div>
+      </div>
+
+      <div id="canvasWrap">
+        <canvas id="game" width="400" height="400"></canvas>
+        <div id="startOverlay">
+          <div id="startBox">
+            <h2 id="startTitle">Siap Bermain?</h2>
+            <p id="startInfo">Mode: Single Player</p>
+            <p id="startDiff">Level: Easy (Lambat)</p>
+            <button id="startBtn" onclick="startGame()">START</button>
+          </div>
+        </div>
+        <div id="pauseOverlay">
+          <div id="pauseBox">
+            <h2>PAUSE</h2>
+            <p>Tekan <strong>P</strong> atau tombol Pause untuk melanjutkan</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="controls">
+        <p><strong>Player 1:</strong> Arrow &uarr; &darr; &larr; &rarr;</p>
+        <p id="p2Controls" style="display:none"><strong>Player 2:</strong> W A S D</p>
+      </div>
+
+      <div id="gameControls">
+        <button id="pauseBtn" onclick="togglePause()" disabled>Pause</button>
+      </div>
+
     </div>
+
+    <!-- GAME OVER POPUP -->
+    <div id="gameOverPopup" class="modal-overlay">
+      <div class="modal-content gameover-content">
+        <h2 id="gameOverTitle">GAME OVER</h2>
+        <div id="gameOverBody" class="modal-body">
+          <div class="go-stats">
+            <div class="go-stat">
+              <span class="go-label">Skor Akhir</span>
+              <span class="go-value" id="goScore">0</span>
+            </div>
+            <div class="go-stat">
+              <span class="go-label">Level</span>
+              <span class="go-value" id="goLevel">1</span>
+            </div>
+            <div class="go-stat">
+              <span class="go-label">Makanan</span>
+              <span class="go-value" id="goFood">0</span>
+            </div>
+            <div class="go-stat">
+              <span class="go-label">Waktu</span>
+              <span class="go-value" id="goTime">0s</span>
+            </div>
+          </div>
+          <div id="goWinner" class="go-winner"></div>
+        </div>
+        <div class="go-buttons">
+          <button class="modal-close" onclick="backToMenu()">Menu Utama</button>
+          <button class="modal-close go-restart" onclick="restartGame()">Main Lagi</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL TRANSITION POPUP -->
+    <div id="levelPopup" class="modal-overlay">
+      <div class="modal-content levelup-content">
+        <h2 style="color:var(--primary)" id="levelPopupTitle">Game Level Tercapai!</h2>
+        <div class="modal-body">
+          <p id="levelUpInfo">Kamu mencapai level berikutnya!</p>
+          <p id="levelUpSpeed" style="color:var(--text-muted);font-size:14px">Kecepatan akan meningkat. Lanjutkan?</p>
+        </div>
+        <div class="level-transition-buttons">
+          <button class="modal-close level-no-btn" onclick="declineNextLevel()">Tidak</button>
+          <button class="modal-close go-restart" onclick="proceedNextLevel()">Lanjut &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIO TOGGLE -->
+    <button id="audioToggle" onclick="toggleAudio()" title="Aktifkan/nonaktifkan suara">&#x1F50A;</button>
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast"></div>
 
     <script src="game.js"></script>
   </body>

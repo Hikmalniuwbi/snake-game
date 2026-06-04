@@ -1,0 +1,28 @@
+[     211ms] [LOG] Snake Game Phase 2 loaded @ http://localhost:3000/game.js:1363
+[   49310ms] TypeError: Cannot read properties of null (reading 'style')
+    at transitionToGame (http://localhost:3000/game.js:963:16)
+    at HTMLButtonElement.onclick (http://localhost:3000/:70:59)
+[   73538ms] TypeError: Cannot read properties of null (reading 'style')
+    at startGame (http://localhost:3000/game.js:921:16)
+    at HTMLButtonElement.onclick (http://localhost:3000/:194:57)
+[   75472ms] ReferenceError: paused is not defined
+    at togglePause (http://localhost:3000/game.js:1058:3)
+    at HTMLButtonElement.onclick (http://localhost:3000/:205:64)
+[   76595ms] ReferenceError: paused is not defined
+    at togglePause (http://localhost:3000/game.js:1058:3)
+    at HTMLButtonElement.onclick (http://localhost:3000/:205:64)
+[   77447ms] ReferenceError: paused is not defined
+    at togglePause (http://localhost:3000/game.js:1058:3)
+    at HTMLButtonElement.onclick (http://localhost:3000/:205:64)
+[   77732ms] ReferenceError: paused is not defined
+    at togglePause (http://localhost:3000/game.js:1058:3)
+    at HTMLButtonElement.onclick (http://localhost:3000/:205:64)
+[   77878ms] ReferenceError: paused is not defined
+    at togglePause (http://localhost:3000/game.js:1058:3)
+    at HTMLButtonElement.onclick (http://localhost:3000/:205:64)
+[   85932ms] TypeError: Cannot read properties of null (reading 'style')
+    at transitionToGame (http://localhost:3000/game.js:963:16)
+    at HTMLButtonElement.onclick (http://localhost:3000/:70:59)
+[   86724ms] TypeError: Cannot read properties of null (reading 'style')
+    at startGame (http://localhost:3000/game.js:921:16)
+    at HTMLButtonElement.onclick (http://localhost:3000/:194:57)
