@@ -61,25 +61,25 @@ function startBGM() {
   if (isAudioMuted) return;
   try {
     bgmAudio.currentTime = 0;
-    bgmAudio.play().catch(function(e) {
+    bgmAudio.play().catch(function (e) {
       console.log("BGM play prevented:", e);
     });
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function resumeBGM() {
   if (isAudioMuted) return;
   try {
-    bgmAudio.play().catch(function(e) {
+    bgmAudio.play().catch(function (e) {
       console.log("BGM play prevented:", e);
     });
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function stopBGM() {
   try {
     bgmAudio.pause();
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function playTone(freq, duration, type, volume) {
@@ -100,25 +100,25 @@ function playTone(freq, duration, type, volume) {
 
 function playEatSound() {
   playTone(880, 0.08, "square", 0.08);
-  setTimeout(function() { playTone(1100, 0.08, "square", 0.06); }, 60);
+  setTimeout(function () { playTone(1100, 0.08, "square", 0.06); }, 60);
 }
 
 function playSpecialEatSound() {
   playTone(1100, 0.08, "square", 0.08);
-  setTimeout(function() { playTone(1320, 0.08, "square", 0.08); }, 60);
-  setTimeout(function() { playTone(1540, 0.1, "square", 0.06); }, 120);
+  setTimeout(function () { playTone(1320, 0.08, "square", 0.08); }, 60);
+  setTimeout(function () { playTone(1540, 0.1, "square", 0.06); }, 120);
 }
 
 function playLevelUpSound() {
   playTone(660, 0.1, "square", 0.08);
-  setTimeout(function() { playTone(880, 0.1, "square", 0.08); }, 100);
-  setTimeout(function() { playTone(1100, 0.15, "square", 0.08); }, 200);
+  setTimeout(function () { playTone(880, 0.1, "square", 0.08); }, 100);
+  setTimeout(function () { playTone(1100, 0.15, "square", 0.08); }, 200);
 }
 
 function playGameOverSound() {
   playTone(440, 0.15, "sawtooth", 0.06);
-  setTimeout(function() { playTone(330, 0.15, "sawtooth", 0.06); }, 150);
-  setTimeout(function() { playTone(220, 0.3, "sawtooth", 0.06); }, 300);
+  setTimeout(function () { playTone(330, 0.15, "sawtooth", 0.06); }, 150);
+  setTimeout(function () { playTone(220, 0.3, "sawtooth", 0.06); }, 300);
 }
 
 function playCollisionSound() {
@@ -155,7 +155,7 @@ function showToast(message, type) {
   toast.textContent = message;
   toast.className = "toast-" + (type || "info") + " show";
   clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(function() {
+  toastTimeout = setTimeout(function () {
     toast.classList.remove("show");
   }, 2500);
 }
@@ -604,7 +604,7 @@ function drawSnake(snake, color, prevSnake, t, headColor, sdx, sdy) {
   var segSize = 18;
   var offset = (GRID_SIZE - segSize) / 2;
 
-  snake.forEach(function(segment, i) {
+  snake.forEach(function (segment, i) {
     var x, y;
     if (i < prevSnake.length) {
       var prev = prevSnake[i];
@@ -665,7 +665,7 @@ function drawSnake(snake, color, prevSnake, t, headColor, sdx, sdy) {
 function drawFood() {
   var time = Date.now() / 300;
   // Regular food
-  foods.forEach(function(f, i) {
+  foods.forEach(function (f, i) {
     var pulse = Math.sin(time + i * 2) * 0.15 + 0.85;
     var size = 16 * pulse;
     var off = (GRID_SIZE - size) / 2;
@@ -798,7 +798,7 @@ function declineNextLevel() {
 // ============================================================
 function showGameOverPopup() {
   stopBGM(); // Stop music on game over
-  
+
   var elapsed = Math.floor((Date.now() - gameStartTime) / 1000);
   var mins = Math.floor(elapsed / 60);
   var secs = elapsed % 60;
@@ -916,7 +916,7 @@ function confirmMode() {
   playMenuSound();
   document.getElementById("modeInstrModal").style.display = "none";
   // Update button highlights
-  document.querySelectorAll(".mode-btn").forEach(function(btn) {
+  document.querySelectorAll(".mode-btn").forEach(function (btn) {
     btn.classList.remove("selected");
   });
   var btns = document.querySelectorAll(".mode-btn");
@@ -946,13 +946,13 @@ function cancelModeSelection() {
 function setSnakeColor(color) {
   snakeColor = color;
   playMenuSound();
-  document.querySelectorAll("#colorPickerSingle .color-btn").forEach(function(btn) {
+  document.querySelectorAll("#colorPickerSingle .color-btn").forEach(function (btn) {
     btn.classList.remove("active-color");
     if (btn.dataset.color === color) {
       btn.classList.add("active-color");
     }
   });
-  document.querySelectorAll("#colorPickerP1 .color-btn").forEach(function(btn) {
+  document.querySelectorAll("#colorPickerP1 .color-btn").forEach(function (btn) {
     btn.classList.remove("active-color");
     if (btn.dataset.color === color) {
       btn.classList.add("active-color");
@@ -963,7 +963,7 @@ function setSnakeColor(color) {
 function setSnake2Color(color) {
   snake2Color = color;
   playMenuSound();
-  document.querySelectorAll("#colorPickerP2 .color-btn").forEach(function(btn) {
+  document.querySelectorAll("#colorPickerP2 .color-btn").forEach(function (btn) {
     btn.classList.remove("active-color");
     if (btn.dataset.color === color) {
       btn.classList.add("active-color");
@@ -981,14 +981,14 @@ function hideAbout() {
 }
 
 // Close modals on click outside
-document.getElementById("aboutModal").addEventListener("click", function(e) {
+document.getElementById("aboutModal").addEventListener("click", function (e) {
   if (e.target === this) hideAbout();
 });
-document.getElementById("modeInstrModal").addEventListener("click", function(e) {
+document.getElementById("modeInstrModal").addEventListener("click", function (e) {
   if (e.target === this) cancelModeSelection();
 });
-document.getElementById("gameOverPopup").addEventListener("click", function(e) {
-  if (e.target === this) {} // Prevent accidental close
+document.getElementById("gameOverPopup").addEventListener("click", function (e) {
+  if (e.target === this) { } // Prevent accidental close
 });
 
 // ============================================================
@@ -1130,7 +1130,7 @@ function transitionToGame() {
 }
 
 // Override: Start button now transitions first then starts
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (e.target.id === "startBtn" || e.target.closest("#startBtn")) {
     // Already handled by onclick=startGame
   }
@@ -1203,7 +1203,7 @@ function togglePause() {
 // ============================================================
 // KEYBOARD CONTROLS
 // ============================================================
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
   var key = event.key;
 
   if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "w", "W", "s", "S", "a", "A", "d", "D", "p", "P", "r", "R"].includes(key)) {
@@ -1288,9 +1288,9 @@ function gameLoop(timestamp) {
 
   while (accumulator >= gameSpeed && steps < maxSteps && gamePhase === "playing" && !pendingGameLevelUp) {
     // Save previous positions for interpolation
-    prevSnake1 = snake1.map(function(s) { return { x: s.x, y: s.y }; });
+    prevSnake1 = snake1.map(function (s) { return { x: s.x, y: s.y }; });
     if (gameMode !== "single") {
-      prevSnake2 = snake2.map(function(s) { return { x: s.x, y: s.y }; });
+      prevSnake2 = snake2.map(function (s) { return { x: s.x, y: s.y }; });
     }
 
     // Move player 1
@@ -1440,9 +1440,9 @@ function getP2HeadColor() {
 // POLYFILL: roundRect for older browsers
 // ============================================================
 if (!CanvasRenderingContext2D.prototype.roundRect) {
-  CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
+  CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
     if (typeof r === "number") r = [r];
-    var radii = r.map(function(v) { return Math.min(v, Math.min(w, h) / 2); });
+    var radii = r.map(function (v) { return Math.min(v, Math.min(w, h) / 2); });
     var tl = radii[0] || 0;
     this.moveTo(x + tl, y);
     this.lineTo(x + w - tl, y);
