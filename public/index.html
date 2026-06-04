@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="gameTitle">Snake Game</h1>
+
+    <!-- Mode Selection Overlay -->
+    <div id="modeOverlay">
+      <div id="modeMenu">
+        <h2>Pilih Mode Permainan</h2>
+        <p>Pilih mode yang ingin dimainkan:</p>
+        <button class="mode-btn mode-single" onclick="startSingle()">
+          Single Player (1 Pemain)
+        </button>
+        <button class="mode-btn mode-multi" onclick="startMulti()">
+          Multi Player (2 Pemain)
+        </button>
+      </div>
+    </div>
+
+    <!-- Score Board -->
+    <div id="scoreBoard">
+      <div class="score-box p1-color">
+        <span class="player-label">Player 1</span>
+        <span id="score1Display">0</span>
+      </div>
+      <div class="score-box p2-color">
+        <span class="player-label" id="p2Label">Player 2</span>
+        <span id="score2Display">0</span>
+      </div>
+      <div class="score-box level-box">
+        <span class="level-label">Level</span>
+        <span id="levelDisplay">1</span>
+      </div>
+    </div>
+
+    <canvas id="game" width="400" height="400"></canvas>
+
+    <div id="controls">
+      <p><strong>Player 1:</strong> Arrow &uarr; &darr; &larr; &rarr;</p>
+      <p><strong>Player 2:</strong> W A S D</p>
+    </div>
+
+    <div id="info">
+      <p>
+        Tekan <strong>P</strong> atau klik <strong>Pause</strong> untuk pause
+      </p>
+      <p>Tekan <strong>Enter</strong> atau <strong>R</strong> untuk restart</p>
+      <button id="pauseBtn" onclick="togglePause()">Pause</button>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
