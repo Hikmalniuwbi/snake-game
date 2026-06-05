@@ -19,8 +19,8 @@
   --danger: #ff3355;
   --warning: #ffcc00;
   --text: #e0e6f0;
-  --text-dim: #8899bb;
-  --text-muted: #4a5a7a;
+  --text-dim: #b5c4df;
+  --text-muted: #8496bc;
   --border: rgba(0,255,136,0.15);
   --border-glow: rgba(0,255,136,0.35);
   --font-display: 'Orbitron', monospace;
@@ -1024,6 +1024,57 @@ body::before {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (min-width: 768px) {
+  #mainMenu {
+    max-width: 860px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    column-gap: 32px;
+    row-gap: 16px;
+    align-items: start;
+  }
+  
+  .game-title {
+    grid-column: span 2;
+  }
+  
+  .subtitle {
+    grid-column: span 2;
+    margin-bottom: 12px;
+  }
+  
+  .menu-section:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 3;
+    margin-bottom: 0;
+  }
+  
+  .menu-section:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 3;
+    margin-bottom: 0;
+  }
+  
+  #colorPickerSingle, #colorPickerDouble {
+    grid-column: 2;
+    grid-row: 4;
+    margin-bottom: 0;
+  }
+  
+  .menu-nav {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+  }
+  
+  #playBtn {
+    grid-column: span 2;
+    grid-row: 5;
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 480px) {
   #mainMenu { padding: 28px 20px 24px; }
   .game-title { font-size: 22px; }

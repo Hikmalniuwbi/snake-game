@@ -14,6 +14,7 @@ const score1Display = document.getElementById("score1Display");
 const score2Display = document.getElementById("score2Display");
 const levelDisplay = document.getElementById("levelDisplay");
 const speedDisplay = document.getElementById("speedDisplay");
+const p1Label = document.getElementById("p1Label");
 const p2Label = document.getElementById("p2Label");
 const p2ScoreBox = document.getElementById("p2ScoreBox");
 
@@ -164,8 +165,8 @@ function showToast(message, type) {
 // CONFIGURATION
 // ============================================================
 const GAME_LEVELS = [
-  { name: "Easy", maxScore: 25, baseSpeed: 350, speedLabel: "Lambat" },
-  { name: "Medium", maxScore: 50, baseSpeed: 250, speedLabel: "Sedang" },
+  { name: "Easy", maxScore: 3, baseSpeed: 350, speedLabel: "Lambat" },
+  { name: "Medium", maxScore: 7, baseSpeed: 250, speedLabel: "Sedang" },
   { name: "Hard", maxScore: Infinity, baseSpeed: 150, speedLabel: "Cepat" }
 ];
 
@@ -188,7 +189,7 @@ const SPECIAL_FOOD_DURATION = 10000;
 const SPECIAL_FOOD_POINTS = 3;
 
 const GRID_SIZE = 20;
-const CELLS = 20; // 400 / 20
+const CELLS = 25; // 500 / 20 = 25
 
 // ============================================================
 // GAME STATE
@@ -298,9 +299,9 @@ function updateLevelDisplay() {
 function initSnakes() {
   // Player 1 - starts at left-center, moving right
   snake1 = [
-    { x: 200, y: 200 },
-    { x: 180, y: 200 },
-    { x: 160, y: 200 }
+    { x: 240, y: 240 },
+    { x: 220, y: 240 },
+    { x: 200, y: 240 }
   ];
   dx1 = 20; dy1 = 0;
   score1 = 0; gameOver1 = false; grow1 = false;
@@ -308,9 +309,9 @@ function initSnakes() {
 
   // Player 2 / AI - starts at right-center, moving left
   snake2 = [
-    { x: 200, y: 180 },
-    { x: 220, y: 180 },
-    { x: 240, y: 180 }
+    { x: 240, y: 220 },
+    { x: 260, y: 220 },
+    { x: 280, y: 220 }
   ];
   dx2 = -20; dy2 = 0;
   score2 = 0; gameOver2 = false; grow2 = false;
@@ -827,7 +828,7 @@ function showGameOverPopup() {
       gameOverTitle.textContent = "GAME OVER";
     }
     // Ganti skor di box dengan label 'player 1 score' dan 'player 2 score'
-    goScore.innerHTML = "<div style='font-size: 15px; margin-bottom: 4px;'>player 1 score: " + score1 + "</div><div style='font-size: 15px;'>player 2 score: " + score2 + "</div>";
+    goScore.innerHTML = "<div style='font-size: 15px; margin-bottom: 4px; color: " + snakeColor + "'>player 1 score: " + score1 + "</div><div style='font-size: 15px; color: " + snake2Color + "'>player 2 score: " + score2 + "</div>";
     goWinner.innerHTML = winnerText;
   } else if (gameMode === "ai") {
     finalScore = score1;
@@ -842,7 +843,7 @@ function showGameOverPopup() {
       winnerText = "🤝 <strong>Seri! Skill kamu setara komputer!</strong>";
     }
     // Ganti skor di box dengan label 'player saja score' dan 'AI score'
-    goScore.innerHTML = "<div style='font-size: 15px; margin-bottom: 4px;'>player saja score: " + score1 + "</div><div style='font-size: 15px;'>AI score: " + score2 + "</div>";
+    goScore.innerHTML = "<div style='font-size: 15px; margin-bottom: 4px; color: " + snakeColor + "'>player saja score: " + score1 + "</div><div style='font-size: 15px; color: " + AI_COLOR + "'>AI score: " + score2 + "</div>";
     goWinner.innerHTML = winnerText;
   }
 
@@ -1034,16 +1035,21 @@ function startGame() {
   if (gameMode === "single") {
     p2ScoreBox.style.display = "none";
     p2Controls.style.display = "none";
-    document.querySelector(".p1-box .player-label").textContent = "Score";
+    p1Label.textContent = "Score";
+    p1Label.style.color = snakeColor;
   } else {
     p2ScoreBox.style.display = "flex";
     p2Controls.style.display = "inline";
     if (gameMode === "ai") {
       p2Label.textContent = "AI";
-      document.querySelector(".p1-box .player-label").textContent = "Player Saja";
+      p2Label.style.color = AI_COLOR;
+      p1Label.textContent = "Player Saja";
+      p1Label.style.color = snakeColor;
     } else {
       p2Label.textContent = "Player 2";
-      document.querySelector(".p1-box .player-label").textContent = "Player 1";
+      p2Label.style.color = snake2Color;
+      p1Label.textContent = "Player 1";
+      p1Label.style.color = snakeColor;
     }
   }
 
@@ -1106,18 +1112,23 @@ function transitionToGame() {
   if (gameMode === "single") {
     p2ScoreBox.style.display = "none";
     p2Controls.style.display = "none";
-    document.querySelector(".p1-box .player-label").textContent = "Score";
+    p1Label.textContent = "Score";
+    p1Label.style.color = snakeColor;
     document.getElementById("controls").innerHTML = "<p><strong>Control:</strong> Arrow &uarr; &darr; &larr; &rarr;</p>";
   } else {
     p2ScoreBox.style.display = "flex";
     p2Controls.style.display = "inline";
     if (gameMode === "ai") {
       p2Label.textContent = "AI";
-      document.querySelector(".p1-box .player-label").textContent = "Player Saja";
+      p2Label.style.color = AI_COLOR;
+      p1Label.textContent = "Player Saja";
+      p1Label.style.color = snakeColor;
       document.getElementById("controls").innerHTML = "<p><strong>Player Saja:</strong> Arrow &uarr; &darr; &larr; &rarr;</p>";
     } else {
       p2Label.textContent = "Player 2";
-      document.querySelector(".p1-box .player-label").textContent = "Player 1";
+      p2Label.style.color = snake2Color;
+      p1Label.textContent = "Player 1";
+      p1Label.style.color = snakeColor;
       document.getElementById("controls").innerHTML = "<p><strong>Player 1:</strong> Arrow &uarr; &darr; &larr; &rarr;</p><p><strong>Player 2:</strong> W A S D</p>";
     }
   }
