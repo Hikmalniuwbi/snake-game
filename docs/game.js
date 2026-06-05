@@ -766,7 +766,7 @@ function showGameLevelPopup(targetIndex) {
   var prevGl = GAME_LEVELS[gameLevelIndex];
   document.getElementById("levelPopupTitle").textContent = "GOKIL NAIK LEVEL!";
   levelUpInfo.innerHTML = "Skor kamu kencang banget sampe melompat ke level <strong>" + gl.name + "</strong>!";
-  var wallNote = (targetIndex >= 2) ? " <br><span style='color:var(--danger);font-weight:600'>&#x26A0; Tembok sekarang SOLID, jangan asal seruduk!</span>" : "";
+  var wallNote = (targetIndex >= 2) ? " <br><span style='color:var(--danger);font-weight:600'>&#x26A0; Tembok sekarang tidak dapat ditembus, jangan asal seruduk!</span>" : "";
   levelUpSpeed.innerHTML = "Kecepatan: " + prevGl.speedLabel + " &rarr; " + gl.speedLabel + ". Berani lanjut gak bos?" + wallNote;
   levelPopup.style.display = "flex";
 }
