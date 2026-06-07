@@ -165,8 +165,8 @@ function showToast(message, type) {
 // CONFIGURATION
 // ============================================================
 const GAME_LEVELS = [
-  { name: "Easy", maxScore: 3, baseSpeed: 350, speedLabel: "Lambat" },
-  { name: "Medium", maxScore: 7, baseSpeed: 250, speedLabel: "Sedang" },
+  { name: "Easy", maxScore: 25, baseSpeed: 350, speedLabel: "Lambat" },
+  { name: "Medium", maxScore: 50, baseSpeed: 250, speedLabel: "Sedang" },
   { name: "Hard", maxScore: Infinity, baseSpeed: 150, speedLabel: "Cepat" }
 ];
 
